@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Intellicentrix</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="diagrams.css">
+</head>
+
+<body>
+    <header>
+        <img class="logo" src="e1cc4d3d-8417-4d39-952b-231c36c686cb.jpg">
+        <div class="group">
+            <ul class="navigation">
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+                <li><a href="study_notes.html">Study Notes</a></li>
+                <li><a href="diagrams.html">Diagrams</a></li>
+                <li><a href="past_papers.html">Past Papers</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+            </ul>
+        </div>
+        <div class="gems" href="gems.html">
+            <span class="icon">
+                <ion-icon name="diamond-outline" href="gems.html"></ion-icon>
+            </span>
+        </div>
+    </header>
+
+    <section class="gallery">
+        <div class="container">
+            <div class="row">
+                <div class="gallery-filter">
+                    <span class="filter-item active" data-filter="all">all</span>
+                    <span class="filter-item" data-filter="watch">Chemistry</span>
+                    <span class="filter-item" data-filter="headphone">Physics</span>
+                    <span class="filter-item" data-filter="camera">Biology</span>
+                    <span class="filter-item" data-filter="phone">Economics</span>
+                </div>
+            </div>
+            <div class="row">
+                <!-- gallery item start -->
+                <div class="gallery-item shoe">
+                    <div class="gallery-item-inner">
+                        <img src="pictures/e-math-set-notation-venn-diagram.jpg" alt="shoe">
+                    </div>
+                </div>
+                <!-- gallery item end -->
+                <!-- gallery item start -->
+                <div class="gallery-item headphone">
+                    <div class="gallery-item-inner">
+                        <img src="pictures/7.2.4-Forces-on-coil-after-commutator-has-reversed-the-direction-of-the-current_1.png" alt="headphone">
+                    </div>
+                </div>
+                <!-- gallery item end -->
+                <!-- gallery item start -->
+                <div class="gallery-item camera">
+                    <div class="gallery-item-inner">
+                        <img src="pictures/20110501163524.gif" alt="camera">
+                    </div>
+                </div>
+                <!-- gallery item end -->
+                <!-- gallery item start -->
+                <div class="gallery-item headphone">
+                    <div class="gallery-item-inner">
+                        <img src="pictures/page142_img2.jpg" alt="headphone">
+                    </div>
+                </div>
+                <!-- gallery item end -->
+                <!-- gallery item start -->
+                <div class="gallery-item camera">
+                    <div class="gallery-item-inner">
+                        <img src="pictures/The-three-types-of-neurone.avif" alt="camera">
+                    </div>
+                </div>
+                <!-- gallery item end -->
+                <div class="gallery-item phone">
+                    <div class="gallery-item-inner">
+                        <img src="pictures/ppc.png" alt="phone">
+                    </div>
+                </div>
+
+
+
+                <div class="gallery-item watch">
+                    <div class="gallery-item-inner">
+                        <img src="pictures/main-qimg-9c333548ac0097094c692499d9b80707.png" alt="watch">
+                    </div>
+                </div>
+
+                <!-- gallery item start -->
+                <div class="gallery-item watch">
+                    <div class="gallery-item-inner">
+                        <img src="pictures/20220116143733_61e42dad79215_cie_igcse_chemistry_0610_notespage1.png" alt="watch">
+                    </div>
+                </div>
+                <!-- gallery item end -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        const filterContainer = document.querySelector(".gallery-filter"),
+            galleryItems = document.querySelectorAll(".gallery-item");
+
+        filterContainer.addEventListener("click", (event) => {
+            if (event.target.classList.contains("filter-item")) {
+                // deactivate existing active 'filter-item'
+                filterContainer.querySelector(".active").classList.remove("active");
+                // activate new 'filter-item'
+                event.target.classList.add("active");
+                const filterValue = event.target.getAttribute("data-filter");
+                galleryItems.forEach((item) => {
+                    if (item.classList.contains(filterValue) || filterValue === 'all') {
+                        item.classList.remove("hide");
+                        item.classList.add("show");
+                    } else {
+                        item.classList.remove("show");
+                        item.classList.add("hide");
+                    }
+                });
+            }
+        });
+    </script>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
